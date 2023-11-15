@@ -1,0 +1,18 @@
+h1 {
+    font-family: 'Montserrat Subrayada';
+  }
+
+h3 {
+    font-family: 'Montserrat Alternates';
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+
+p {
+    font-family: 'Montserrat';
+}
+  
+.horror {
+    color: red;
+}

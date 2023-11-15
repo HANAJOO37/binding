@@ -1,0 +1,48 @@
+h1 {
+    font-family: 'Cinzel';
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+section {
+    background-color: #E5E4E2;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h3 {
+    font-family: 'Nunito';
+    background-color: black;
+    color: white;
+    padding: 8px;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#headerh3 {
+    font-family: 'Nunito';
+    background-color: white;
+    color: black;
+    text-align: left;
+}
+
+p {
+    font-family: 'Nunito';
+    
+    line-height: 20px;
+}
+  
+.horror {
+    color: #B22222;
+}
+
+.horizontal-line {
+    border: none; 
+    border-top: 1px solid black;
+    margin: 20px 0;
+  }
+

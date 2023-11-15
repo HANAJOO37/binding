@@ -1,0 +1,35 @@
+h1 {
+    font-family: 'Cinzel Decorative';
+  }
+
+h3 {
+    font-family: 'Crimson Text';
+}
+
+#headerh3 {
+    font-family: 'Crimson Text';
+    background-color: white;
+    color: black;
+    font-style: italic;
+}
+
+p {
+    font-family: 'Cormorant Garamond';
+    line-height: 20px;
+}
+  
+.horror {
+    color: #B22222;
+}
+
+
+.vertical-line {
+    border-left: 1px solid black; 
+    height: 80px;
+}
+
+.horizontal-line {
+    border: none; 
+    border-top: 1px solid black;
+    margin: 10px 0;
+  }
