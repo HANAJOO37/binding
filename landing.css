@@ -3,11 +3,6 @@ div a {
     color: red;
 }
 
-.middle {
-    display: flex;
-    text-align: center;
-    font-family: 'Cinzel Decorative';
-}
 
 .vertical-line {
     border-left: 1px solid black; 
@@ -25,7 +20,9 @@ div a:hover {
     width: 100%;
 }
 
-#main {
+.middle {
+    /*display: flex;*/
     text-align: center;
+    font-family: 'Cinzel Decorative';
     width: 100%;
 }
