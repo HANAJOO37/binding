@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        <link rel="stylesheet" href="common.css">
+        <link rel="stylesheet" href="landing.css">
+        <!--<link rel="stylesheet" href="direction-1.css">
+        <link rel="stylesheet" href="direction-2.css">
+        <link rel="stylesheet" href="direction-3.css">-->
+        <title>What makes you Hard, Horrify, Terrible?</title>
+    </head>
+    <body>
+        <div class="middle">
+            <h1>What makes you 
+                <a href="hard.html">Hard</a>,<br>
+                <a href="index.html">Horrify</a>,<br>
+                <a href="terrible.html">Terrible</a>?
+            </h1>
+        </div>
+        <hr class="horizontal-line"></span>
+        <h3 id="datetime"></h3>
+
+        <script> 
+            function updateTime() {
+            const now = new Date();
+            const datetimeElement = document.getElementById('datetime');
+                        
+            datetimeElement.textContent = now.toLocaleString();
+            }
+
+            updateTime();
+            setInterval(updateTime, 1000);
+        </script>
+    </body>
+</html>

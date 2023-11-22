@@ -1,0 +1,26 @@
+div a {
+    text-decoration: none;
+    color: red;
+}
+
+.middle {
+    display: flex;
+    text-align: center;
+    font-family: 'Cinzel Decorative';
+}
+
+.vertical-line {
+    border-left: 1px solid black; 
+    height: 80px;
+}
+
+div a:hover {
+    text-decoration: underline;
+    text-decoration-color: red;
+    color: black;
+}
+
+#datetime {
+    text-align: center;
+    width: 100%;
+}
