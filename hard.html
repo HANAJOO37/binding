@@ -8,8 +8,19 @@
         <title>Everything Easy is Hard Again</title>
     </head>
     <body>
+        <nav class="navbar">
+            <input type="checkbox" id="menutoggle" />
+            <label for="menutoggle" class="hamburger">&#9776;</label>
+            <ul class="menu">
+              <li><p><a href="index.html">Home</a></p></li>
+              <li><p><a href="hard.html">Hard</a></p></li>
+              <li><p><a href="horrify.html">Horrify</a></p></li>
+              <li><p><a href="terrible.html">Terrible</a></p></li>
+            </ul>
+        </nav>
         <header>
-        <h1><a href="https://frankchimero.com/blog/2018/everything-easy/">Everything Easy is <span class="horror">Hard</span> Again</a></h1>
+        <h1><a href="https://frankchimero.com/blog/2018/everything-easy/" class="tooltip" title="See the original article" target="_blank">Everything Easy is <span class="horror">Hard</span> Again</a></h1>
+        <p class="normalp">Frank Chimero | February 9, 2018</p>
         <div class="vertical-line"></div>
         <h3 id="headerh3">This talk was given on October 12, 2017 at Mirror Conf in Braga, Portugal, and again on February 9, 2018 at <span class="red">the Awwwards Conference</span> in Berlin.</h3>
         </header>
@@ -98,9 +109,9 @@
 
         </p>
         
-        <h3>simple, responsive layout<br>
-            web fonts and nicely set text<br>
-            performant, scalable images</h3>
+        <h3>simple, responsive <span class="red">layout</span><br>
+            web fonts and nicely set <span class="red">text</span><br>
+            performant, scalable <span class="red">images</span></h3>
         <hr class="horizontal-line"></span>
         <p>
             All of these have been more than met for at least five years, but the complexity of even these very fundamental needs has ballooned in the last few years.<br><br>
@@ -144,7 +155,15 @@
             The web also needs diligent people so that the idea of what the web is and what it does remains legible to everyone. This applies to being able to read the systems and social environments the web creates so we know what’s real and what’s not, but the call for legibility should also humbly apply to writing legible code and designs systems that are easy for nearly anyone to interpret thanks to their elegance. That important work has a place, too.<br><br>
 
             It’s by keeping our work legible that we keep the door open to the next generation of our co-workers. What works for them also works for us, because whether you are just out of school or have twenty years of experience, you’ll eventually end up in the same spot: your first year of making websites.
-        </p>
-        </section>
+        </p>      
+        <div>
+            <input type="checkbox" id="responsetoggle" />
+            <label for="responsetoggle" class="response"><h3>Response </h3></label>
+            <p class="responsehidden">
+            November 29, 2023 <br>
+            Although the author feels web design is getting harder, it might be because web design is solving more complicated issues. You see, as web design improves, more people want complex stuff.
+            </p>
+        </div>
+        </section>    
     </body>
 </html>

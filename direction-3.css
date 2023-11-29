@@ -22,8 +22,6 @@ p {
     line-height: normal;
 }
   
-
-
 .vertical-line {
     border-left: 1px solid black; 
     height: 80px;
@@ -33,7 +31,7 @@ p {
     border: none; 
     border-top: 1px solid black;
     margin: 10px 0;
-  }
+}
 
 a {
     text-decoration: none;
@@ -48,4 +46,62 @@ a:hover {
 
 .horror {
     color: red;
+}
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip::after {
+    content: attr(title);
+    visibility: hidden;
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    white-space: nowrap;  
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-25%);
+}
+  
+.tooltip:hover::after {
+    visibility: visible;
+}
+
+
+#responsetoggle {
+    display: none;
+}
+
+.response {
+    cursor: pointer;
+}
+
+.response h3 {
+    color: red;
+}
+
+.response h3:hover {
+    text-decoration: underline;
+    text-decoration-color: red;
+    color: black;
+}
+  
+.responsehidden {
+    display: none; 
+}
+  
+#responsetoggle:checked ~ .responsehidden {
+    display: block; 
+}
+
+#responsetoggle:checked + .response h3::after {
+    content: "➴";
+}
+  
+#responsetoggle:not(:checked) + .response h3::after {
+    content: "➵"; 
 }

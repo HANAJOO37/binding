@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap');
@@ -10,15 +9,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&italic&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+
 
 body {
     padding: 20px;
 }
 
 :root {
-    --base-font-size: 2rem; 
-    --typography-h1: calc(var(--base-font-size) * 3);
-    --typography-h3: calc(var(--base-font-size) * 1.5);
+    --base-font-size: 1.3rem; 
+    --typography-h1: calc(var(--base-font-size) * 2.2);
+    --typography-h3: calc(var(--base-font-size) * 1.3);
     --typography-p: var(--base-font-size);
 }
 
@@ -32,37 +33,21 @@ p {
   font-size: var(--typography-p);
 }
 
-.red {
-    color: red;
-}
-
-.redunderline {
-    text-decoration: underline;
-    text-decoration-color: red;
-}
-
 @media screen and (max-width:375px) { 
-    :root {
-        --base-font-size: 1rem;  
-    }
-    h1 {
-        font-size: calc(var(--base-font-size) * 2.5);
-    }
     h3 {
-        font-size: calc(var(--base-font-size) * 1.8);
         width: 80%;
     }
     p {
-        font-size: calc(var(--base-font-size) * 1.3);
         width: 80%;
         margin-bottom: 80px;
     }
 }
 
-@media screen and (min-width: 376px) and (max-width:768px) {
-    :root {
-        --base-font-size: 1rem;  
+@media screen and (min-width: 376px) and (max-width:1279px) {
+    body {
+        padding: 40px;
     }
+
     h1 {
         font-size: calc(var(--base-font-size) * 3);
     }
@@ -77,12 +62,117 @@ p {
     }
 }
 
-@media screen and (min-width: 769px) /*and (max-width:1280px)*/ {
+@media screen and (min-width: 1280px) {
+    body {
+        padding: 60px;
+    }
+
+    :root {
+        --base-font-size: 2rem; 
+        --typography-h1: calc(var(--base-font-size) * 3);
+        --typography-h3: calc(var(--base-font-size) * 1.5);
+        --typography-p: var(--base-font-size);
+    }
+
     h3 {
         width: 66.666%;
     }
     p {
         width: 66.666%;
         margin-bottom: 160px;
-    }
+        /*padding: ;*/
+    }   
 }
+
+.red {
+    color: red;
+}
+
+h3 .red {
+    background-color: red;
+    padding: 0px 8px;
+    color: white;
+}
+
+.redunderline {
+    text-decoration: underline;
+    text-decoration-style: wavy;
+    text-decoration-thickness: 2px;
+    text-decoration-color: red;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff; 
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000; 
+    padding-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: red;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    text-decoration-color: red;
+    color: black;
+}
+
+#menutoggle {
+    display: none;
+}
+  
+.hamburger {
+    font-size: 48px;
+    cursor: pointer;
+}
+  
+.menu {
+    display: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.menu p {
+    margin-bottom: 20px;
+}
+  
+#menutoggle:checked ~ .menu {
+    display: block;
+}
+
+.normalp {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.share {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.notespace {
+    display: flex;
+    justify-content: center;
+}
+
+.stickynote {
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    background-color: rgb(248, 230, 125);
+    border-radius: 2px;
+    font-family: 'Bad Script';
+    line-height: normal;
+    overflow: auto;
+    transform: rotate(-5deg); 
+}
+
