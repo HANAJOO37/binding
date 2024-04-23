@@ -1,0 +1,270 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 20px;
+    background-color: #F1EDE8;
+    font-family: 'Michroma';
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+header {
+    margin-top: 30px;
+}
+.horizontal-line {
+    border: none;
+    border-top: 3px solid black; 
+    width: 500px;
+    margin-bottom: 10px;
+}
+
+.horizontal-line-two {
+    border: none;
+    border-top: 2px solid black; 
+    width: 500px;
+    margin-top: 10px;
+}
+
+h2 {
+    font-size: 56px;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 30px;
+}
+
+.intro {
+    margin-bottom: 30px;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto; 
+    overflow: auto;
+}
+
+.place {
+    text-align: left;
+}
+
+.clothes-section {
+    width: 500px;
+    height: 250px;
+    background-color: black;
+    margin: 20px auto; 
+    /* overflow-x: scroll;  */
+}
+  
+.clothes-container {
+    display: flex;
+    animation: scroll 20s linear infinite;
+}
+  
+.clothes-section img {
+    height: 150px;
+    margin: 10px;
+    /* padding: 10px; */
+    object-fit: cover;
+    max-inline-size: none;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+button {
+    background-color: black;
+    color: white;
+    padding: 2px;
+    cursor: pointer;
+    padding: 6px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+button:hover {
+    background-color: #5bd4f3;
+    color: black;
+}
+
+footer {
+    font-size: small;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.column-left {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+input[type="text"]::placeholder {
+    color: darkgray;
+    background-color: white;
+    font-style: italic; 
+    padding: 5px;
+}
+
+img.logo {
+    width: 150px; 
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.gradient-text {
+    animation-name: changeGradient;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes changeGradient {
+    0% {
+        color: #e35fc0;
+      }
+      25% {
+        color: #585ec7;
+      }
+      50% {
+        color: #5896fb;
+      }
+      75% {
+        color: #5bd4f3;
+      }
+      100% {
+        color: #42d653;
+      }
+    }  
+
+
+.first {
+    color: white;
+    text-align: left;
+    font-size: small;
+    padding: 10px;
+}
+
+.second {
+    color: white;
+    text-align: right;
+    font-size: small;
+    padding: 10px;
+}
+
+
+.error-message {
+    color: rgb(209, 0, 0);
+}
+
+
+/*팝업*/
+.popup-wrapper {
+    display: none; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%;
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: 9999; 
+}
+
+.popup {
+    position: fixed; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* width: 460px; */
+    height: 80%;
+    background-color: #F1EDE8; 
+    padding: 20px; 
+    border: 1px solid #ccc; 
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 10000; 
+    overflow: scroll;
+}
+
+.close {
+    position: absolute; 
+    top: 20px; 
+    right: 20px; 
+    cursor: pointer; 
+    font-size: medium;
+}
+
+.brand {
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+}
+
+.clothes {
+    font-size: medium;
+    text-align: center;
+}
+
+.clothes_img {
+    object-fit: cover;
+    max-inline-size: none;
+    border: 2px solid black; 
+    margin-bottom: 10px;
+    align-items: center;
+}
+
+.recommendations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.buynow {
+    font-size: medium;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    width: 300px;
+    text-align: center;
+    align-items: center;
+    display: inline-block;
+}
+
+.buynow:hover {
+    background-color: #5bd4f3;
+    color: black;
+}
+
+a {
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #5896fb;
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 500px; 
+    }
+    .popup {
+        width: 90%; 
+        max-width: 460px; 
+    }
+}

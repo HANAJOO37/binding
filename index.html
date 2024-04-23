@@ -1,53 +1,101 @@
-<!DOCTYPE html>
 <html>
     <head>
+        <title>Fashion Recommendations</title>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1" />     
-        <link rel="stylesheet" href="common.css">
-        <link rel="stylesheet" href="landing.css">
-        <!--<link rel="stylesheet" href="direction-1.css">
-        <link rel="stylesheet" href="direction-2.css">
-        <link rel="stylesheet" href="direction-3.css">-->
-        <title>What makes you Hard, Horrify, Terrible?</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="reset.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+        <script src="landing.js"></script>
+        <script src="script.js"></script>
     </head>
     <body>
-        <nav class="navbar">
-            <input type="checkbox" id="menutoggle" />
-            <label for="menutoggle" class="hamburger">&#9776;</label>
-            <ul class="menu">
-              <li><p><a href="index.html">Home</a></p></li>
-              <li><p><a href="hard.html">Hard</a></p></li>
-              <li><p><a href="horrify.html">Horrify</a></p></li>
-              <li><p><a href="terrible.html">Terrible</a></p></li>
-            </ul>
-        </nav>
-        <div class="middle">
-            <h1>What makes you<br>
-                <a href="hard.html">Hard</a>,<br>
-                <a href="horrify.html">Horrify</a>,<br>
-                <a href="terrible.html">Terrible</a>?
-            </h1>
-        </div>
-        
-        <hr class="horizontal-line"></span>
-        <p class="share">Share your insights on design challenges in the present moment.</p>
-        <h3 id="datetime"></h3>
-        
-        <script> 
-            function updateTime() {
-            const now = new Date();
-            const datetimeElement = document.getElementById('datetime');
-                        
-            datetimeElement.textContent = now.toLocaleString();
-            }
-
-            updateTime();
-            setInterval(updateTime, 1000);
-        </script>
-        <div class="notespace">
-            <div class="stickynote" contenteditable="true">
-                Write your insights here...
+        <div class="container">
+            <header>
+                <img class="logo" src="logo.png" alt="Logo">
+            </header>
+            <div class="intro">
+                <div class="horizontal-line"></div>
+                <h2>WHAT'S YOUR <span class="gradient-text">OOTD</span></h2>
+                <br>
+                <p>Check the trendy clothes by temperature!</p>
             </div>
-        </div>
+            <div class="place">
+                <div class="horizontal-line-two"></div>
+                <div class="column">
+                <h4 class="column-left">Where you at?</h4>
+                <button id="current">Check Current Location</button>
+                </div>
+                <div class="horizontal-line-two"></div>
+                <div class="column">
+                <input type="text" id="location" class="column-left" placeholder="Or search by city name">
+                <button id="search">Search</button>
+                </div>
+                <div class="horizontal-line-two"></div>
+            </div>
+            <div class="clothes-section">
+                <p class="first">KNOW YOUR STYLE</p>
+                <div class="clothes-container"></div>
+                <p class="second">WHAT'S YOUR OOTD</p>
+            </div>
+
+            <div class="popup-wrapper" id="popupWrapper">
+                <div class="popup" id="popupContent">
+                <span class="close" id="close">X</span>
+                <div class="popup-results" id="popupResults"></div>
+
+            <div class="recommendations">
+            </div>
+
+            </div>
+            </div>
+
+            <div class="horizontal-line"></div>
+            <footer>
+                <p>Recommended clothes sourced from <a href="https://www.vogue.com/">Vogue</a>.</p>
+            </footer>
+            </div>
+            
+        
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                const currentLocationButton = document.getElementById('current');
+                const searchButton = document.getElementById('search');
+                const popup = document.getElementById('popupWrapper');
+                const popupResults = document.getElementById('popupResults');
+                const closeButton = document.getElementById('close');
+                const locationDiv = document.querySelector('.location');
+
+                currentLocationButton.addEventListener('click', function() {
+
+                    const currentLocationData = "Current Location Data"; 
+                    displayPopup(currentLocationData);
+                });
+
+
+                searchButton.addEventListener('click', function() {
+
+                    const recommendations = document.querySelector('.recommendations').innerHTML;
+                    displayPopup(recommendations);
+                });
+
+
+                function displayPopup(data) {
+                    popupResults.innerHTML = data;
+                    popup.style.display = 'block';
+                }
+
+
+                closeButton.addEventListener('click', function() {
+                    popup.style.display = 'none';
+    });
+});
+
+            </script>
     </body>
 </html>
+
